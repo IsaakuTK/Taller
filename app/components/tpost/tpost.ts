@@ -37,32 +37,8 @@ class Tpost extends HTMLElement{
 
     connectedCallback() {
         this.render();
-        this.addEventListeners();
       }
 
-      dissconnectedCallback() {
-        console.log("unmounted");
-        // this.removeEventListeners();
-      }
-
-    //   removeEventListeners() {
-    //     if()
-    //     this.shadowRoot
-    //       .querySelector("button")
-    //       .removeEventListener("click", this.onButtonClicked);
-    //   }
-
-      addEventListeners() {
-        if(this.shadowRoot)
-        this.shadowRoot
-        .querySelector("button")
-          addEventListener("click", this.onButtonClicked);
-      }
-
-      onButtonClicked(){
-        const currentValue = this.getAttribute("countlikes") || 0;
-        this.setAttribute("countlikes", "countlikes" + 1);
-      }
 
     attributeChangedCallback(
         propName: Attribute,
