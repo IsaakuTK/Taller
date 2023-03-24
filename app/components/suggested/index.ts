@@ -46,10 +46,10 @@ class MyTrend extends HTMLElement {
         render() {
             if (this.shadowRoot) {
                 this.shadowRoot.innerHTML = `
-                <link rel="stylesheet" href="./app/components/profile/profile.css">
-                <section>
+                <link rel="stylesheet" href="./app/components/suggested/index.css">
+                <section class="eje">
 
-                <button>${this.name}</button>
+                <button class="aja">${this.name}</button>
                 
 
                 </section>

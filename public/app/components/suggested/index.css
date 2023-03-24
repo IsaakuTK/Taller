@@ -1,0 +1,16 @@
+.eje{
+    width: 250px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    margin-left: 5000;
+    height: 100%;
+   
+}
+.aja{
+    justify-content: center;
+    width: 25%;
+    background-color: white;
+    border-color: transparent;
+
+    
+}
