@@ -47,11 +47,14 @@ class MyTrend extends HTMLElement {
             if (this.shadowRoot) {
                 this.shadowRoot.innerHTML = `
                 <link rel="stylesheet" href="./app/components/suggested/index.css">
-                <section class="eje">
+                <section class="section2">
+                <section class="section">
+                
 
                 <button class="aja">${this.name}</button>
                 
 
+                </section>
                 </section>
                 `;
             }

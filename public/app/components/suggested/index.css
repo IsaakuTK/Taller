@@ -1,9 +1,18 @@
-.eje{
+
+
+.section{
     width: 250px;
     background-color: rgb(255, 255, 255);
     display: flex;
-    margin-left: 5000;
+    
     height: 100%;
+    margin-left: 1590px;
+    height: 100px;
+    display: flex;
+    border-radius: 10px;
+    
+    
+
     
    
 }
@@ -12,6 +21,35 @@
     width: 25%;
     background-color: white;
     border-color: transparent;
+    font-size: 25px;
+    justify-content: space-between;
+    
 
+    
+}
+
+@media screen and (max-width: 400px){
+    .aja{
+        justify-content: center;
+        width: 25%;
+        background-color: white;
+        border-color: transparent;
+        font-size: 25px;
+        justify-content: space-between;
+        
+    
+        
+    }
+    .section
+    {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        height: 600px;
+        background-color:rgb(85.1%, 85.1%, 85.1%);
+        border-radius: 15px;
+        margin-bottom: 10px;
+     
+    }
     
 }

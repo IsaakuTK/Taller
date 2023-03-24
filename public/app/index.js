@@ -41,7 +41,7 @@ class Appcontainer extends HTMLElement {
         this.render();
     }
     render() {
-        var _a;
+        var _a, _b, _c;
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML = `<link rel="stylesheet" href="./app/index.css">`;
             const post = this.ownerDocument.createElement("section");
@@ -49,18 +49,22 @@ class Appcontainer extends HTMLElement {
             this.shadowRoot.innerHTML += `
                 <my-bar></my-bar>
                 `;
+            const sugest = this.ownerDocument.createElement("section");
+            sugest.className = "sugest";
             this.Suggested.forEach((profile) => {
-                var _a;
-                (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(profile);
+                sugest.appendChild(profile);
             });
+            const trend = this.ownerDocument.createElement("section");
+            trend.className = "trend";
             this.Trending.forEach((profile) => {
-                var _a;
-                (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(profile);
+                trend.appendChild(profile);
             });
             for (let index = 0; index < this.posts.length; index++) {
                 post.appendChild(this.posts[index]);
             }
-            (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(post);
+            (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(trend);
+            (_b = this.shadowRoot) === null || _b === void 0 ? void 0 : _b.appendChild(post);
+            (_c = this.shadowRoot) === null || _c === void 0 ? void 0 : _c.appendChild(sugest);
         }
     }
 }

@@ -74,18 +74,29 @@ class Appcontainer extends HTMLElement{
                 <my-bar></my-bar>
                 `;
 
+            const sugest = this.ownerDocument.createElement("section")
+            sugest.className = "sugest";
              this.Suggested.forEach((profile) => {
-                this.shadowRoot?.appendChild(profile);
+                sugest.appendChild(profile);
             });
-
+            const trend = this.ownerDocument.createElement("section")
+            trend.className = "trend";
             this.Trending.forEach((profile) => {
-                this.shadowRoot?.appendChild(profile);
+                trend.appendChild(profile);
             });
-
+            
             for (let index = 0; index < this.posts.length; index++) {
                 post.appendChild(this.posts[index]);
             }  
+
+            
+            this.shadowRoot?.appendChild(trend);
             this.shadowRoot?.appendChild(post);
+            this.shadowRoot?.appendChild(sugest);
+
+
+
+
         }
     }
 

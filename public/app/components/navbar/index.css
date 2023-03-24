@@ -2,6 +2,7 @@
     width: 100%;
     background-color: aliceblue;
     border-radius: 10px;
+    margin-bottom: 20px;
     
 
 }
@@ -43,4 +44,60 @@
     margin-right: -50px;
     margin-left: 50px;
 
+}
+
+
+@media screen and (max-width: 400px){
+    .aja{
+        justify-content: center;
+        width: 25%;
+        background-color: white;
+        border-color: transparent;
+        font-size: 25px;
+        justify-content: space-between;
+        
+    
+        
+    }
+    .busq
+    {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+        height: 200px;
+        background-color:rgb(85.1%, 85.1%, 85.1%);
+        border-radius: 15px;
+        margin-bottom: 10px;
+     
+    }
+    .input{
+        width: 150px;
+        height: 75px;
+        border-color: transparent;
+        border-radius: 10px;
+        background-color: gray;
+        color: white;
+        font-size: 15px;
+       margin-left: 120px;
+       margin-top: -40px;
+
+       
+    }
+    .logo{
+        width: 80px;
+        margin-left: 80px;
+    }
+    .first{
+        width: 50px;
+        padding-right: 20px;
+        padding-left: 50px;
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+    .up{
+        width: 40px;
+       margin-top: -50px;
+    
+    }
+    
 }
