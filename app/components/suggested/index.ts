@@ -1,10 +1,6 @@
 export enum Atributos {
     "name" = "name",
-    "image" = "image",
-
-   
-
-    
+    "image" = "image",  
 }
 
 class MyTrend extends HTMLElement {
@@ -53,7 +49,7 @@ class MyTrend extends HTMLElement {
                 <link rel="stylesheet" href="./app/components/profile/profile.css">
                 <section>
 
-                <button>${this.name} <img src ="${this.image}"></button>
+                <button>${this.name}</button>
                 
 
                 </section>

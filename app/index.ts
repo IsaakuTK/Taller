@@ -1,10 +1,10 @@
 import "./components/index.js";
 import data from "./data.js";
 import  Tpost, { Attribute } from "./components/tpost/tpost.js";
-import dataT from "./dataT.js"
-import suggested, { Atributos} from "./components/suggested/index.js"
-import dataS from "./dataS.js"
-import trending, {attribute} from "./components/trending/index.js"
+import dataT from "./dataT.js";
+import suggested, { Atributos} from "./components/suggested/index.js";
+import dataS from "./dataS.js";
+import trending, {attribute} from "./components/trending/index.js";
 
 
 
@@ -38,20 +38,20 @@ class Appcontainer extends HTMLElement{
 
 
             dataT.forEach((user) => {
-                const profileCard = this.ownerDocument.createElement(
+                const trend = this.ownerDocument.createElement(
                     "my-trend"
                     ) as trending;
-                    profileCard.setAttribute(attribute.image, user.image);
-                    profileCard.setAttribute(attribute.name, user.name);
-                    this.Trending.push(profileCard);
+                    trend.setAttribute(attribute.image, user.image);
+                    trend.setAttribute(attribute.name, user.name);
+                    this.Trending.push(trend);
                 });
 
             dataS.forEach((user) => {
-                const profileCard = this.ownerDocument.createElement(
+                const sugest = this.ownerDocument.createElement(
                     "my-suggested"
                     ) as suggested;
-                    profileCard.setAttribute(Atributos.name, user.name);
-                    this.Suggested.push(profileCard);
+                    sugest.setAttribute(Atributos.name, user.name);
+                    this.Suggested.push(sugest);
                  });
     
             
@@ -64,26 +64,23 @@ class Appcontainer extends HTMLElement{
     render() {
         
         if (this.shadowRoot) {
-            this.shadowRoot.innerHTML += `
-                <link rel="stylesheet" href="./dist/index.css">
-                <my-bar></my-bar>
-                `
+            
+         
 
-            this.Suggested.forEach((profile) => {
+            this.shadowRoot.innerHTML = `<link rel="stylesheet" href="./app/index.css">`;
+            const post = this.ownerDocument.createElement("section")
+            post.className = "post";
+            this.shadowRoot.innerHTML += `
+                <my-bar></my-bar>
+                `;
+
+             this.Suggested.forEach((profile) => {
                 this.shadowRoot?.appendChild(profile);
             });
 
             this.Trending.forEach((profile) => {
                 this.shadowRoot?.appendChild(profile);
             });
-
-            this.shadowRoot.innerHTML = ``;
-
-            this.shadowRoot.innerHTML = `<link rel="stylesheet" href="./app/index.css">`;
-            const post = this.ownerDocument.createElement("section")
-            post.className = "post";
-
-           
 
             for (let index = 0; index < this.posts.length; index++) {
                 post.appendChild(this.posts[index]);

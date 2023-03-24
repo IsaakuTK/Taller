@@ -1,5 +1,4 @@
 interface Data {
-
     name:string;
 }
 const data: Data[] =[
@@ -10,7 +9,6 @@ const data: Data[] =[
         name: "Economia"
     },
     {
-      
         name: "Ucrania"
     },
     {

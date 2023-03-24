@@ -29,12 +29,9 @@ class MyTrend extends HTMLElement {
     render() {
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML = `
-                <link rel="stylesheet" href="./app/components/profile/profile.css">
+                <link rel="stylesheet" href="">
                 <section>
-
                 <button>${this.name} <img src ="${this.image}"></button>
-                
-
                 </section>
                 `;
         }

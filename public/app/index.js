@@ -26,15 +26,15 @@ class Appcontainer extends HTMLElement {
             this.posts.push(profileCard);
         });
         dataT.forEach((user) => {
-            const profileCard = this.ownerDocument.createElement("my-trend");
-            profileCard.setAttribute(attribute.image, user.image);
-            profileCard.setAttribute(attribute.name, user.name);
-            this.Trending.push(profileCard);
+            const trend = this.ownerDocument.createElement("my-trend");
+            trend.setAttribute(attribute.image, user.image);
+            trend.setAttribute(attribute.name, user.name);
+            this.Trending.push(trend);
         });
         dataS.forEach((user) => {
-            const profileCard = this.ownerDocument.createElement("my-suggested");
-            profileCard.setAttribute(Atributos.name, user.name);
-            this.Suggested.push(profileCard);
+            const sugest = this.ownerDocument.createElement("my-suggested");
+            sugest.setAttribute(Atributos.name, user.name);
+            this.Suggested.push(sugest);
         });
     }
     connectedCallback() {
@@ -43,8 +43,10 @@ class Appcontainer extends HTMLElement {
     render() {
         var _a;
         if (this.shadowRoot) {
+            this.shadowRoot.innerHTML = `<link rel="stylesheet" href="./app/index.css">`;
+            const post = this.ownerDocument.createElement("section");
+            post.className = "post";
             this.shadowRoot.innerHTML += `
-                <link rel="stylesheet" href="./dist/index.css">
                 <my-bar></my-bar>
                 `;
             this.Suggested.forEach((profile) => {
@@ -55,10 +57,6 @@ class Appcontainer extends HTMLElement {
                 var _a;
                 (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(profile);
             });
-            this.shadowRoot.innerHTML = ``;
-            this.shadowRoot.innerHTML = `<link rel="stylesheet" href="./app/index.css">`;
-            const post = this.ownerDocument.createElement("section");
-            post.className = "post";
             for (let index = 0; index < this.posts.length; index++) {
                 post.appendChild(this.posts[index]);
             }
