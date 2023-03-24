@@ -12,7 +12,7 @@
     margin-bottom: -15px;
 }
 .logo{
-    margin-left: -400px;
+    margin-left: -200px;
     padding-right: 300px;
     margin-bottom: -20px;
 
@@ -30,15 +30,17 @@
 }
 
 .perfil{
-    width: 50px;
+    width: 60px;
     margin-left: 50px;
     border-radius: 50px;
-    margin-left: 300px;
+    margin-left: 500px;
    margin-bottom: -10px;
     
 }
 .up{
-    width: 50px;
-    margin-bottom: -5px;
+    width: 80px;
+    margin-bottom: -15px;
     margin-right: -50px;
+    margin-left: 50px;
+
 }
