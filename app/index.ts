@@ -74,6 +74,10 @@ class Appcontainer extends HTMLElement{
                 this.shadowRoot?.appendChild(profile);
             });
 
+            this.Trending.forEach((profile) => {
+                this.shadowRoot?.appendChild(profile);
+            });
+
             this.shadowRoot.innerHTML = ``;
             const post = this.ownerDocument.createElement("section")
             post.className = "post";
