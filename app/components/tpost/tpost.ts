@@ -71,21 +71,24 @@ class Tpost extends HTMLElement{
                 this.shadowRoot.innerHTML=`
                 <link rel="stylesheet" href="./app/components/tpost/tpost.css"> 
                 <section class="all">
-                    <section>
-                    <img class="prof" src="${this.profile}">
-                        <section>
-                        <p>${this.user}</p>
-                        <p>${this.description}</p>
+                    <section >
+                    
+                        <section class = "up">
+                        <img class="prof" src="${this.profile}">
+                        <p class = "us">${this.user}</p>
                         </section>    
+
+                        <p class="ndd">${this.description}</p>
+
                     </section>
-                <img src="${this.image}">
-                    <section>  
-                    <button class="b1"></button>
-                    <p>${this.countlikes}</p>
-                    <button><img src="https://icons.veryicon.com/png/o/hardware/jackdizhu_pc/comment-25.png"></button>
-                    <p>${this.countcomments}</p>
-                    <button><img src="https://static.thenounproject.com/png/3566328-200.png"></button>
-                    <p>${this.countrepost}</p>
+                <img class ="pimg" src="${this.image}">
+                    <section class = "nd">  
+                    <button><img class = "i1" src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png"></button>
+                    <p class="p1">${this.countlikes}</p>
+                    <button><img class = "i1" src="https://icons.veryicon.com/png/o/hardware/jackdizhu_pc/comment-25.png"></button>
+                    <p class="p1">${this.countcomments}</p>
+                    <button><img class = "i1" src="https://static.thenounproject.com/png/3566328-200.png"></button>
+                    <p class="p1">${this.countrepost}</p>
                     </section>
                 </section>
                 `;

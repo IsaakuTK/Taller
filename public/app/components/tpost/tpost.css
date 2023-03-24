@@ -38,10 +38,7 @@ button{
     height: 30px;
     margin-left: 5px;
 }
-.elpp{
-    display: flex;
-    flex-direction: row;
-}
+
 .nd{
     display: flex;
     flex-direction: row;
@@ -60,14 +57,6 @@ button{
 }
 
 .p1
-{
-    margin-left: 10px;
-}
-.p2
-{
-    margin-left: 10px;
-}
-.p3
 {
     margin-left: 10px;
 }
