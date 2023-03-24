@@ -3,7 +3,7 @@ import data from "./data.js";
 import { Attribute } from "./components/tpost/tpost.js";
 import dataT from "./dataT.js";
 import { Atributos } from "./components/suggested/index.js";
-import dataS from "./dataS";
+import dataS from "./dataS.js";
 import { attribute } from "./components/trending/index.js";
 class Appcontainer extends HTMLElement {
     constructor() {

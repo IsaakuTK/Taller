@@ -3,7 +3,7 @@ import data from "./data.js";
 import  Tpost, { Attribute } from "./components/tpost/tpost.js";
 import dataT from "./dataT.js"
 import suggested, { Atributos} from "./components/suggested/index.js"
-import dataS from "./dataS"
+import dataS from "./dataS.js"
 import trending, {attribute} from "./components/trending/index.js"
 
 
@@ -41,7 +41,6 @@ class Appcontainer extends HTMLElement{
                 const profileCard = this.ownerDocument.createElement(
                     "my-trend"
                     ) as trending;
-   
                     profileCard.setAttribute(attribute.image, user.image);
                     profileCard.setAttribute(attribute.name, user.name);
                     this.Trending.push(profileCard);
@@ -51,7 +50,6 @@ class Appcontainer extends HTMLElement{
                 const profileCard = this.ownerDocument.createElement(
                     "my-suggested"
                     ) as suggested;
-       
                     profileCard.setAttribute(Atributos.name, user.name);
                     this.Suggested.push(profileCard);
                  });
