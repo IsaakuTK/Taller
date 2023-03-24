@@ -48,8 +48,8 @@ class MyTrend extends HTMLElement {
                 this.shadowRoot.innerHTML = `
                 <link rel="stylesheet" href="./app/components/trending/index.css">
                 <section class ="section">
-                <h1 class ="trend">Trendind</h1>
-                <button class="button">${this.name} <img class="img" src ="${this.image}"></button>
+                
+                <img class="img" src ="${this.image}"><button class="button">${this.name} </button>
                 </section>
                 `;
             }
