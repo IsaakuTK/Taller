@@ -68,6 +68,7 @@ class Appcontainer extends HTMLElement{
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML += `
                 <link rel="stylesheet" href="./dist/index.css">
+                <my-bar></my-bar>
                 `
 
             this.Suggested.forEach((profile) => {
