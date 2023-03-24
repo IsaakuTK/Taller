@@ -72,20 +72,23 @@ class Tpost extends HTMLElement {
                 <link rel="stylesheet" href="./app/components/tpost/tpost.css"> 
                 <section class="all">
                     <section>
-                    <img class="prof" src="${this.profile}">
-                        <section>
-                        <p>${this.user}</p>
-                        <p>${this.description}</p>
-                        </section>    
+                    
+                        <section class="nd">
+                        <img class="prof" src="${this.profile}">
+                        <p class="us">${this.user}</p>
+                        </section>   
+
+                        <p class="ndd">${this.description}</p> 
+
                     </section>
-                <img src="${this.image}">
+                <img class="pimg" src="${this.image}">
                     <section class="elpp">  
                     <button class="b1"><img class="i1" src="https://icons.veryicon.com/png/o/miscellaneous/icon-pack/heart-140.png"></button> 
-                    <p>${this.countlikes}</p>
+                    <p class="p1">${this.countlikes}</p>
                     <button><img class="i1" src="https://icons.veryicon.com/png/o/hardware/jackdizhu_pc/comment-25.png"></button>
-                    <p>${this.countcomments}</p>
+                    <p class="p2">${this.countcomments}</p>
                     <button><img class="i1" src="https://static.thenounproject.com/png/3566328-200.png"></button>
-                    <p>${this.countrepost}</p>
+                    <p class="p3">${this.countrepost}</p>
                     </section>
                 </section>
                 `;
