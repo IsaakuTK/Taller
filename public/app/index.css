@@ -1,6 +1,27 @@
 .post{
+    overflow-x:scroll;
     margin-left: 550px;
     display: flex;
     flex-direction: column;
     justify-content: center
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    
+}
+
+.scroll
+{
+     overflow-x:scroll;
+     overflow-y:hidden;
+}
+
+@media screen and (max-width: 480px){
+    .post{
+        width: 400px;
+        overflow-x:scroll;
+        margin-left: 0px;
+        
+    }
 }
