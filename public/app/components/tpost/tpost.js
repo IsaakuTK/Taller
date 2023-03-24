@@ -69,8 +69,8 @@ class Tpost extends HTMLElement {
     render() {
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML = `
-                <link rel="stylesheet" href="./src/components/tpost/tpost.css"> 
-                <section>
+                <link rel="stylesheet" href="./app/components/tpost/tpost.css"> 
+                <section class="all">
                     <section>
                     <img class="prof" src="${this.profile}">
                         <section>
@@ -80,7 +80,7 @@ class Tpost extends HTMLElement {
                     </section>
                 <img src="${this.image}">
                     <section>  
-                    <button class="b1"><img src="https://icons.veryicon.com/png/o/miscellaneous/icon-pack/heart-140.png"></button>
+                    <button class="b1"></button>
                     <p>${this.countlikes}</p>
                     <button><img src="https://icons.veryicon.com/png/o/hardware/jackdizhu_pc/comment-25.png"></button>
                     <p>${this.countcomments}</p>

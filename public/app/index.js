@@ -56,6 +56,7 @@ class Appcontainer extends HTMLElement {
                 (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(profile);
             });
             this.shadowRoot.innerHTML = ``;
+            this.shadowRoot.innerHTML = `<link rel="stylesheet" href="./app/index.css">`;
             const post = this.ownerDocument.createElement("section");
             post.className = "post";
             for (let index = 0; index < this.posts.length; index++) {

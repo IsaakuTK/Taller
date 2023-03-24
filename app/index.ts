@@ -78,6 +78,8 @@ class Appcontainer extends HTMLElement{
             });
 
             this.shadowRoot.innerHTML = ``;
+
+            this.shadowRoot.innerHTML = `<link rel="stylesheet" href="./app/index.css">`;
             const post = this.ownerDocument.createElement("section")
             post.className = "post";
 
