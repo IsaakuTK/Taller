@@ -62,5 +62,5 @@ class MyTrend extends HTMLElement {
         }
     }
     
-customElements.define("my-trend", MyTrend);
+customElements.define("my-suggested", MyTrend);
 export default MyTrend;

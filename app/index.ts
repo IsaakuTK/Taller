@@ -1,12 +1,20 @@
 import "./components/index.js";
 import data from "./data.js";
 import  Tpost, { Attribute } from "./components/tpost/tpost.js";
+import dataT from "./dataT.js"
+import suggested, { Atributos} from "./components/suggested/index.js"
+import dataS from "./dataS"
+import trending, {attribute} from "./components/trending/index.js"
+
 
 
 
 class Appcontainer extends HTMLElement{
 
     posts: Tpost[]=[];
+    Trending: trending[]=[];
+    Suggested: suggested[]=[];
+
 
     constructor(){
         super();
@@ -27,6 +35,28 @@ class Appcontainer extends HTMLElement{
                 console.log(user.countlikes)
                 this.posts.push(profileCard);
             });
+
+
+            dataT.forEach((user) => {
+                const profileCard = this.ownerDocument.createElement(
+                    "my-trend"
+                    ) as trending;
+   
+                    profileCard.setAttribute(attribute.image, user.image);
+                    profileCard.setAttribute(attribute.name, user.name);
+                    this.Trending.push(profileCard);
+                });
+
+            dataS.forEach((user) => {
+                const profileCard = this.ownerDocument.createElement(
+                    "my-suggested"
+                    ) as suggested;
+       
+                    profileCard.setAttribute(attribute.name, user.name);
+                    this.Suggested.push(profileCard);
+                 });
+    
+            
     }
 
     connectedCallback() {
@@ -40,9 +70,15 @@ class Appcontainer extends HTMLElement{
                 <link rel="stylesheet" href="./dist/index.css">
                 `
 
+            this.Suggested.forEach((profile) => {
+                this.shadowRoot?.appendChild(profile);
+            });
+
             this.shadowRoot.innerHTML = ``;
             const post = this.ownerDocument.createElement("section")
             post.className = "post";
+
+           
 
             for (let index = 0; index < this.posts.length; index++) {
                 post.appendChild(this.posts[index]);
