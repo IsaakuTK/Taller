@@ -1,4 +1,4 @@
-export enum attribute {
+export enum Atributos {
     "name" = "name",
     "image" = "image",
 
@@ -13,7 +13,7 @@ class MyTrend extends HTMLElement {
     
     
     static get observedAttributes() {
-        const attrs: Record<attribute, null> = {
+        const attrs: Record<Atributos, null> = {
 
             image: null,
             name: null,
@@ -33,7 +33,7 @@ class MyTrend extends HTMLElement {
     }
     
     attributeChangedCallback(
-        propName: attribute,
+        propName: Atributos,
         _: string | undefined,
         newValue: string | undefined
         ) {
