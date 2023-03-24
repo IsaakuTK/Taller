@@ -1,10 +1,16 @@
 import "./components/index.js";
 import data from "./data.js";
 import { Attribute } from "./components/tpost/tpost.js";
+import dataT from "./dataT.js";
+import { Atributos } from "./components/suggested/index.js";
+import dataS from "./dataS";
+import { attribute } from "./components/trending/index.js";
 class Appcontainer extends HTMLElement {
     constructor() {
         super();
         this.posts = [];
+        this.Trending = [];
+        this.Suggested = [];
         this.attachShadow({ mode: "open" });
         data.forEach((user) => {
             const profileCard = this.ownerDocument.createElement("my-post");
@@ -19,6 +25,17 @@ class Appcontainer extends HTMLElement {
             console.log(user.countlikes);
             this.posts.push(profileCard);
         });
+        dataT.forEach((user) => {
+            const profileCard = this.ownerDocument.createElement("my-trend");
+            profileCard.setAttribute(attribute.image, user.image);
+            profileCard.setAttribute(attribute.name, user.name);
+            this.Trending.push(profileCard);
+        });
+        dataS.forEach((user) => {
+            const profileCard = this.ownerDocument.createElement("my-suggested");
+            profileCard.setAttribute(Atributos.name, user.name);
+            this.Suggested.push(profileCard);
+        });
     }
     connectedCallback() {
         this.render();
@@ -28,7 +45,16 @@ class Appcontainer extends HTMLElement {
         if (this.shadowRoot) {
             this.shadowRoot.innerHTML += `
                 <link rel="stylesheet" href="./dist/index.css">
+                <my-bar></my-bar>
                 `;
+            this.Suggested.forEach((profile) => {
+                var _a;
+                (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(profile);
+            });
+            this.Trending.forEach((profile) => {
+                var _a;
+                (_a = this.shadowRoot) === null || _a === void 0 ? void 0 : _a.appendChild(profile);
+            });
             this.shadowRoot.innerHTML = ``;
             const post = this.ownerDocument.createElement("section");
             post.className = "post";

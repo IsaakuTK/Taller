@@ -52,7 +52,7 @@ class Appcontainer extends HTMLElement{
                     "my-suggested"
                     ) as suggested;
        
-                    profileCard.setAttribute(attribute.name, user.name);
+                    profileCard.setAttribute(Atributos.name, user.name);
                     this.Suggested.push(profileCard);
                  });
     
@@ -91,6 +91,7 @@ class Appcontainer extends HTMLElement{
             this.shadowRoot?.appendChild(post);
         }
     }
+
 
 
 
