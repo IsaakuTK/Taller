@@ -37,7 +37,32 @@ class Tpost extends HTMLElement{
 
     connectedCallback() {
         this.render();
-    }
+        this.addEventListeners();
+      }
+
+      dissconnectedCallback() {
+        console.log("unmounted");
+        // this.removeEventListeners();
+      }
+
+    //   removeEventListeners() {
+    //     if()
+    //     this.shadowRoot
+    //       .querySelector("button")
+    //       .removeEventListener("click", this.onButtonClicked);
+    //   }
+
+      addEventListeners() {
+        if(this.shadowRoot)
+        this.shadowRoot
+        .querySelector("button")
+          addEventListener("click", this.onButtonClicked);
+      }
+
+      onButtonClicked(){
+        const currentValue = this.getAttribute("countlikes") || 0;
+        this.setAttribute("countlikes", "countlikes" + 1);
+      }
 
     attributeChangedCallback(
         propName: Attribute,
@@ -68,22 +93,22 @@ class Tpost extends HTMLElement{
         render(){
             if(this.shadowRoot){
                 this.shadowRoot.innerHTML=`
-                <link rel="stylesheet" href="./app/components/tpost/tpost.css">
+                <link rel="stylesheet" href="./src/components/tpost/tpost.css"> 
                 <section>
                     <section>
-                    <img src="${this.profile}">
+                    <img class="prof" src="${this.profile}">
                         <section>
                         <p>${this.user}</p>
                         <p>${this.description}</p>
                         </section>    
                     </section>
                 <img src="${this.image}">
-                    <section>
-                    <button></button>
+                    <section>  
+                    <button class="b1"><img src="https://icons.veryicon.com/png/o/miscellaneous/icon-pack/heart-140.png"></button>
                     <p>${this.countlikes}</p>
-                    <button></button>
+                    <button><img src="https://icons.veryicon.com/png/o/hardware/jackdizhu_pc/comment-25.png"></button>
                     <p>${this.countcomments}</p>
-                    <button></button>
+                    <button><img src="https://static.thenounproject.com/png/3566328-200.png"></button>
                     <p>${this.countrepost}</p>
                     </section>
                 </section>
