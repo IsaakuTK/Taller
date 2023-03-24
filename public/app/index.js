@@ -26,10 +26,7 @@ class Appcontainer extends HTMLElement {
     render() {
         var _a;
         if (this.shadowRoot) {
-            this.shadowRoot.innerHTML += `
-                <link rel="stylesheet" href="./dist/index.css">
-                `;
-            this.shadowRoot.innerHTML = ``;
+            this.shadowRoot.innerHTML = `<link rel="stylesheet" href="./app/index.css">`;
             const post = this.ownerDocument.createElement("section");
             post.className = "post";
             for (let index = 0; index < this.posts.length; index++) {

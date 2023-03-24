@@ -1,0 +1,6 @@
+.post{
+    margin-left: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center
+}
